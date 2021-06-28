@@ -25,6 +25,7 @@ body {
 
 main {
     height: 50rem;
+    background-color: linear-gradient(60%, hsl(224, 65%, 95%), 40%, hsl(174, 77%, 80%));
 }
 
 section {
@@ -86,7 +87,14 @@ section {
     /* color: var(--Grayish-Blue); */
 }
 
-.update-price {
+#update-price {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: var(--Dark-Desaturated-Blue);
+}
+
+.currency {
     font-size: 2rem;
     font-weight: 800;
     letter-spacing: -0.8px;
@@ -102,7 +110,7 @@ section {
     width: 100%;
     -webkit-appearance: none;
     height: 0.5rem;
-    background-color: var(--Light-Grayish-Blue-Empty-Slider);
+    background: linear-gradient(90deg, hsl(174, 77%, 80%), 52%, hsl(224, 65%, 95%) 52%);
     border-radius: 5px;
 }
 
