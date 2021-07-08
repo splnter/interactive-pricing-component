@@ -1,6 +1,7 @@
 :root {
 --Soft-Cyan: hsl(174, 77%, 80%); /*Full Slider Bar*/
 --Strong-Cyan: hsl(174, 86%, 45%); /*Slider Backround*/
+--X-Strong-Cyan: hsl(174, 66%, 41%); /*Thumb active state*/
 --Light-Grayish-Red: hsl(14, 92%, 95%); /*Discount Background*/
 --Light-Red: hsl(15, 100%, 70%); /*Discount Text*/
 --Pale-Blue: hsl(226, 100%, 87%); /*CTA Text*/
@@ -140,7 +141,6 @@ section {
 
 }
 
-
 .price-per-month {
     font-size: 0.875rem;
     font-weight: 600;
@@ -159,7 +159,8 @@ section {
     font-size: 0.75rem;
 }
 
-.discount .discount-tag {
+.discount-tag, 
+.discount-tag-desktop {
     font-size: 0.626rem;
     color: var(--Light-Red);
     background-color: var(--Light-Grayish-Red);
@@ -278,4 +279,100 @@ button {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+@media (max-width: 375px) {
+    .discount-tag-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 376px) {
+    .pricing-component {
+        width: 37.5%;
+        height: 50%;
+    }
+    .discount-tag {
+        display: none;
+    }
+    .wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 82%;
+    }
+    .range-input {
+        order: 3;
+    }
+    .plan {
+        padding-top: 0;
+    }
+    .toggle-before {
+        text-align: end;
+    }
+    .toggle-after {
+        text-align: start;
+    }
+    .selling-points ul {
+        text-align: start;
+        align-items: start;
+    }
+    .selling-point::before {
+        left: 0;
+    }
+    .selling-point {
+        padding-left: 1.125rem;
+    }
+    button {
+        margin-bottom: 0;
+    }
+    .currency,
+    #update-price {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+    .plan {
+        font-size: 0.875rem;
+        letter-spacing: 2px;
+    }
+    .discount::after {
+        bottom: -15px;
+    }
+    .slider::-webkit-slider-thumb:active {
+        -webkit-appearance: none;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 50%;
+        background-color: var(--X-Strong-Cyan);
+        background-image: url(./images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb:active {
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 50%;
+        background-color: var(--X-Strong-Cyan);
+        background-image: url(./images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+    }
+    .heading {
+        font-size: 1.75rem;
+    }    
+    .intro {
+        font-size: 0.9375rem;
+    }
+    .intro p {
+        display: inline-block;
+    }
+    .text {
+        margin-bottom: 3.75rem;
+    }
 }

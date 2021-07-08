@@ -2,6 +2,11 @@ const prices = [8.00, 12.00, 16.00, 24.00 , 36.00];
 const pageviews = ['10K ', '50K ', '100K ', '500K ', '1M '];
 let multiplyPriceBy = 1;
 
+function inputChange() {
+    respondToUpdate()
+    updateColorOfSlider()
+}
+
 function respondToUpdate () {
     const totalPageviews = document.getElementById('total-pageviews');
     const price = document.getElementById('update-price');
@@ -39,5 +44,9 @@ function applyDiscount () {
 }
 
 document.querySelector('.toggle').addEventListener('click', applyDiscount)
-document.querySelector('.slider').addEventListener('input', respondToUpdate)
-document.querySelector('.slider').addEventListener('input', updateColorOfSlider)
+/* document.querySelector('.slider').addEventListener('input', respondToUpdate) */
+document.querySelector('.slider').addEventListener('input', inputChange)
+
+/* window.addEventListener('mouseover', function(event) {
+    console.log(event.target)
+}) */
