@@ -290,6 +290,7 @@ button {
 @media (min-width: 376px) {
     .pricing-component {
         width: 37.5%;
+        max-width: 33.75rem;
         height: 50%;
     }
     .discount-tag {
@@ -374,5 +375,9 @@ button {
     }
     .text {
         margin-bottom: 3.75rem;
+    }
+    section {
+        max-width: 90rem;
+        margin: 0 auto;
     }
 }
